@@ -37,4 +37,9 @@ let generateHashOfFilesByPath = (path) => {
        .catch(err => console.log(err));
 }
 
-exports.generateHashOfFilesByPath = generateHashOfFilesByPath;
+module.exports = {
+  files: files,
+  filterFeatureFiles: filterFeatureFiles,
+  formatedFeatures :formatedFeatures,
+  generateHashOfFilesByPath : generateHashOfFilesByPath
+};

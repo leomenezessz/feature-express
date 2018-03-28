@@ -4,7 +4,7 @@
   "description": "A Simple HTML view for Cucumber Features.",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha",
     "start": ""
   },
   "author": "Leonardo Menezes",
