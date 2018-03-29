@@ -15,7 +15,7 @@ let files = (featuresPath) => {
   return path.extname(fileName) === ".feature"
 }
 
-let filterFeatureFiles = function(arrayOfFiles) {
+let filterFeatureFiles = (arrayOfFiles) => {
   return  new Promise ((resolve, reject) => resolve(arrayOfFiles.filter(isFeature)));
 };
 
@@ -23,14 +23,14 @@ let formatedFeatures = (arrayOfFeaturesFiles, featuresPath) => {
   var contentFeature = {};
   arrayOfFeaturesFiles.forEach(fileFeature => {
     contentFeature[fileFeature] = [];
-    fs.readFileSync(featuresPath + fileFeature, "utf8").toString().split("\n").forEach(function(line, index, arr){
+    fs.readFileSync(featuresPath + fileFeature, "utf8").toString().split("\n").forEach((line, index, arr) => {
       contentFeature[fileFeature].push(line);
     });
   })
   return  new Promise ((resolve, reject) => resolve(contentFeature));
 }
 
-let generateHashOfFilesByPath = (path) => {
+let generateHashOfFilesByPath = (path = './') => {
  return files(path).then(arrayOfFiles => filterFeatureFiles(arrayOfFiles))  
        .then(arrayOfFeatureFiles => formatedFeatures(arrayOfFeatureFiles, path))
        .then(contentFeature => { return contentFeature })
@@ -41,5 +41,6 @@ module.exports = {
   files: files,
   filterFeatureFiles: filterFeatureFiles,
   formatedFeatures :formatedFeatures,
-  generateHashOfFilesByPath : generateHashOfFilesByPath
+  generateHashOfFilesByPath : generateHashOfFilesByPath,
+  isFeature : isFeature
 };
