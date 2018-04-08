@@ -17,11 +17,11 @@ li {
   display: inline-block;
 }
 
-ul:first-child li {
+ /* ul:first-child li {
   font-size: 27px;
   font-weight: 600;
   color: #5A5A5A;
-}
+}  */
 
 .list-group-item {
   border-radius: 0 !important;
@@ -39,10 +39,6 @@ ul:first-child li {
 .list-group-item.active {
   color: #fff;
   background-color: #06BE9F;
-}
-
-.list-group-item:hover {
-
 }
 
 /* Customizations */

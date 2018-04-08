@@ -1,11 +1,18 @@
-Feature: Login
+Feature: This is a feature
+This a little description.
 
-Scenario: Valid Login
-Given iam in login screen 
-When insert a valid user
-Then show welcome user name!
+Background: This is a background
 
-Scenario: Login with a invalid user
-Given iam in login screen
-When insert a invalid user
-Then show login or password invalid
+@I'm a beatifull tag
+Scenario: This is a Scenario
+Given This a given step
+When This is a when step
+Then This is a then step
+And This is a and step
+But This is a but step
+
+Scenario Outline: This is Scenario Outline
+
+Examples: This is a example
+  | start | eat | left |
+  |  12   |  5  |  7   |
