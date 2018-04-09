@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <h1><%= err %></h1>
+    <title><%= err %></title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
-    
+
+  <section class="container-fluid">
+
+    <div class="row">
+      <div class="col-lg-12 cs-error">
+        <div class="cs-error__content">
+          <figure class="cs-error__img"><img src="images/error.svg" alt="" class="img-responsive"></figure>
+          <h1><strong>Erro:</strong> <br>
+            <%= err %></h1>          
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="cs-footer">
+    Developed with ❤ by <a target="_blank" href="https://github.com/menezes-ssz">Leonardo Menezes</a>
+    <br>
+    <span>Design by <a href="http://kalyneramon.com.br/" target="_blank">Kalyne Ramon</a></span>
+  </footer>
+
 </body>
 </html>
-
-
