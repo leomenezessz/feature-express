@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-     <% var bddLanguage = language;%>;
+     <% var bddLanguage = language;%>
     <script type="text/javascript">
       var gherkinLanguage = <%- JSON.stringify(bddLanguage)  %>;
     </script>
@@ -53,11 +53,11 @@
           <div class="tab-content">
          <% Object.keys(contentFeature).forEach(function(prop) { %>
           <div class="tab-pane jumbotron font-weight-light cs-pane" id=<%=prop%> role="tabpanel">
-             <% for(let i = 0; i < contentFeature[prop].length; i++) { %>
-              <ul>
+             <ul>
+               <% for(let i = 0; i < contentFeature[prop].length; i++) { %>
                <li><%=contentFeature[prop][i]%></li>
-              </ul>
-             <% } %>
+               <% } %>
+             </ul>
             </div>
          <% }); %>
           </div>
