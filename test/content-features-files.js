@@ -1,21 +1,29 @@
-let contentFeaturesFiles = { 'login.feature':
-[ 'Feature: Login',
+let contentFeaturesFiles = { 'example.feature':
+[ 'Feature: This is a feature',
+  'This a little description.',
   '',
-  'Scenario: Valid Login',
-  'Given iam in login screen ',
-  'When insert a valid user',
-  'Then show welcome user name!',
+  'Background: This is a background',
   '',
-  'Scenario: Login with a invalid user',
-  'Given iam in login screen',
-  'When insert a invalid user',
-  'Then show login or password invalid' ],
-'register.feature':
-[ 'Feature: Register',
+  '@I\'m a beatifull tag',
+  'Scenario: This is a Scenario',
+  'Given This a given step',
+  'When This is a when step',
+  'Then This is a then step',
+  'And This is a and step',
+  'But This is a but step',
   '',
-  'Scenario: Register',
-  'Given iam in register screen',
-  'When complete all register rules',
-  'Then show register with success!' ] }
+  'Scenario Outline: This is Scenario Outline',
+  '',
+  'Examples: This is a example',
+  '  | start | eat | left |',
+  '  |  12   |  5  |  7   |',
+  '' ],
+'example2.feature':
+[ 'Feature: Example 2 Feature',
+  '',
+  'Scenario: Example Scenario 2',
+  'Given this is a given step for example 2',
+  'When this is a when step for example 2',
+  'Then this is a then step for example 2' ] }
 
   module.exports = contentFeaturesFiles;

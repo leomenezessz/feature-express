@@ -1,15 +1,3 @@
-const  LANGUAGE = {
-  portuguese: 'pt',
-  english: 'en',
-  keywords: {
-    pt: {feature: 'Funcionalidade:', scenario: 'Cenário:', background: 'Contexto:', examples: 'Exemplo:', but: 'Mas ',
-      given : 'Dado ', when :'Quando ', then : 'Então ', and : 'E ' , scenario_outline : 'scenario_outline'
-  },
-    en: {feature: 'Feature:', scenario: 'Scenario:', background: 'Background:', examples: 'Exemples:', but: 'But ',
-    given : 'Given ', when :'When ', then : 'Then ', and : 'And ', scenario_outline : 'Scenario Outline:'},
-  }
-};
-
 $(document).ready(function() {
   $('#myList a').on('click', function (e) {
     e.preventDefault()
@@ -19,7 +7,6 @@ $(document).ready(function() {
 
   $('.tab-pane ul li').each(function() {
     $(this).html($(this).html().replace(/\"/g, "<strong>\"</strong>"));
-  //  $(this).html($(this).html().replace(/@/, "<strong style='margin-left: -20px'>@</strong>"));
     $(this).html($(this).html().replace(/\|/g, "<strong>|</strong>"));
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].feature, "<strong>"+ LANGUAGE.keywords[gherkinLanguage].feature +"</strong>"));
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].background, "<strong>"+ LANGUAGE.keywords[gherkinLanguage].background + "</strong>"));
@@ -41,12 +28,14 @@ $(document).ready(function() {
     $(".tab-pane ul li:contains(@)").each(function(){
       $(this).addClass('cs-feature-tag');
     });
-    $(".tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].scenario +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].background +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].examples +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].scenario_outline +")").each(function(){
-      $(this).addClass('cs-feature-others');
+    $(".tab-pane ul li:contains(|)").each(function(){
+      $(this).css('white-space','pre');
+    });
+    $(".tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].given +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].when +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].then +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].but +"), .tab-pane ul li:contains("+ LANGUAGE.keywords[gherkinLanguage].and +")").each(function(){
+      $(this).addClass('cs-feature-steps');
     });
   });
 
 });
 
 
-//

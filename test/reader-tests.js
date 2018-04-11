@@ -1,15 +1,14 @@
 let chai = require('chai');
 let expect = require('chai').expect;
 let assert = require('chai').assert;
-let reader = require('../reader.js');
+let reader = require('../lib/reader.js');
 let contentFeaturesFiles = require('./content-features-files');
 let fs = require ('fs');
 
-let allFilesFromFolderFeatures = ['hello.java', 'login.feature', 'register.feature'];
-let onlyFeatureFilesFromFolderFeatures = ['login.feature', 'register.feature'];
+let allFilesFromFolderFeatures = ['example.feature', 'example2.feature', 'hello.java', 'hello.ruby'];
+let onlyFeatureFilesFromFolderFeatures = ['example.feature', 'example2.feature'];
 let featuresExamplePaht = "./features-example/";
 let invalidPath = "./invalid-path/";
-
 
 describe ("Reader Tests", () => {
     it("Should return array of files from directory", async ()=>{

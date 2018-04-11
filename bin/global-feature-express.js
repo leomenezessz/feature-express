@@ -7,6 +7,7 @@ let featurebookEndPoint = '/cs-featurebook';
 let path = process.argv[2];
 let language = process.argv[3] == null ? 'en' : process.argv[3];
 let port = process.argv[4] == null ? 3000 :  process.argv[4];
+
 app.use(express.static('assets'));
 app.set('views','./views/');
 app.engine('html', require('ejs').renderFile);
