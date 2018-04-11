@@ -10,6 +10,11 @@
     "feature-express": "./bin/global-feature-express.js"
   },
   "author": "Leonardo Menezes",
+  "contributors": {
+    "name": "Kalyne Ramon ",
+    "email": "hello@kalyneramon.com.br",
+    "url": "http://kalyneramon.com.br/"
+  },
   "license": "ISC",
   "preferGlobal": true,
   "devDependencies": {
