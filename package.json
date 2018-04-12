@@ -1,5 +1,5 @@
 {
-  "name": "cs-feature-book",
+  "name": "feature-express",
   "version": "0.0.1",
   "description": "A Simple HTML view for Cucumber Features.",
   "main": "./lib/reader.js",
@@ -10,11 +10,14 @@
     "feature-express": "./bin/global-feature-express.js"
   },
   "author": "Leonardo Menezes",
-  "contributors": {
-    "name": "Kalyne Ramon ",
-    "email": "hello@kalyneramon.com.br",
-    "url": "http://kalyneramon.com.br/"
-  },
+  "contributors": [
+    "Kalyne Ramon <hello@kalyneramon.com.br> (http://kalyneramon.com.br/)"
+  ],
+  "keywords": [
+    "cucumber",
+    "feature",
+    "express"
+  ],
   "license": "ISC",
   "preferGlobal": true,
   "devDependencies": {
