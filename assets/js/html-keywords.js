@@ -15,8 +15,8 @@ $(document).ready(function () {
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].scenario, "<strong>" + LANGUAGE.keywords[gherkinLanguage].scenario + "</strong>"));
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].given, "<strong>" + LANGUAGE.keywords[gherkinLanguage].given + "</strong>"));
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].when, "<strong>" + LANGUAGE.keywords[gherkinLanguage].when + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].but, "<strong>" + LANGUAGE.keywords[gherkinLanguage].then + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].then, "<strong>" + LANGUAGE.keywords[gherkinLanguage].but + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].but, "<strong>" + LANGUAGE.keywords[gherkinLanguage].but + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].then, "<strong>" + LANGUAGE.keywords[gherkinLanguage].then + "</strong>"));
     $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].and, "<strong>" + LANGUAGE.keywords[gherkinLanguage].and + "</strong>"));
   });
 
