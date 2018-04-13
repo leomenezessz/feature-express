@@ -1,7 +1,7 @@
 {
   "name": "feature-express",
-  "version": "0.0.2",
-  "description": "A Simple HTML view for Cucumber Features.",
+  "version": "0.0.4",
+  "description": "Feature-Express is simple way to expose your features in a beatifull html.",
   "main": "./lib/reader.js",
   "scripts": {
     "test": "mocha"
@@ -20,6 +20,10 @@
   ],
   "license": "ISC",
   "preferGlobal": true,
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/menezes-ssz/feature-express.git"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",

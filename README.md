@@ -30,7 +30,7 @@ $ feature-express ./YOUR-FEATURES-FOLDER/ pt
 * Express-Feature use english language by default, to use a different language and another port:
  ```
 
- $ feature-express ./features/ pt 4444
+ $ feature-express ./YOUR-FEATURES-FOLDER/ pt 4444
 
  ```
 # NOTE 

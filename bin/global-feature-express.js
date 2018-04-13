@@ -3,7 +3,7 @@
 let express = require('express');
 let reader = require('../lib/reader.js');
 let app = express();
-let featurebookEndPoint = '/cs-featurebook';
+let featurebookEndPoint = '/';
 let envPath = process.argv[2];
 let language = process.argv[3] == null ? 'en' : process.argv[3];
 let port = process.argv[4] == null ? 3000 :  process.argv[4];
