@@ -1,6 +1,6 @@
 {
   "name": "feature-express",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Feature-Express is simple way to expose your features in a beatifull html.",
   "main": "./lib/reader.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "feature",
     "express"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "preferGlobal": true,
   "repository" :
   { "type" : "git"

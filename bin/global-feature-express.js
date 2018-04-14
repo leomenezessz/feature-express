@@ -19,6 +19,6 @@ app.get(featurebookEndPoint , (req, res) => reader.generateHashOfFilesByPath(env
 
 app.listen(port);
 
-console.log("Feature-Express is running "+"http://localhost:"+port+featurebookEndPoint);
+console.log("Feature-Express is running at "+"http://localhost:"+port+featurebookEndPoint);
 
 module.exports = app;
