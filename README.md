@@ -33,6 +33,9 @@ After running the command, your console will generate a url to see your features
 * Express-Feature only support portuguese and english language at the moment.
 * To add a new laguages options add an object to this enum file **language.js** , and send your pull request.
 
+# NOTE
+* ***IMPORTANT : forking staging branch to send your pull request.***
+
 # License
 
 Copyright © 2018 Leonardo Menezes, leonardosmenezes.ssz@gmail.com
