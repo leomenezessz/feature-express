@@ -5,8 +5,8 @@ let expect = require('chai').expect;
 chai.use(chaiHttp);
 
 describe("Route Test", () => 
-    it("GET /cs-featurebook", async () => {
-         await chai.request(app).get('/cs-featurebook').then((res)=>{
+    it("GET /", async () => {
+         await chai.request(app).get('/').then((res)=>{
              expect(res['text']).to.be.not.null;
              expect(res['status']).equals(200);
          })
