@@ -24,13 +24,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-    - unit_tests:
+    
       - run: yarn test
 
-      - deploy:
-          requires: 
-            - unit_tests
+     
       
 
 
