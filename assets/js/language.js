@@ -26,5 +26,17 @@ const LANGUAGE = {
       and: 'And ',
       scenario_outline: 'Scenario Outline:'
     },
+    es: {
+      feature: 'Característica:',
+      scenario: 'Escenario:',
+      background: 'Antecedentes:',
+      examples: 'Ejemplos:',
+      but: 'Pero ',
+      given: 'Dado ',
+      when: 'Cuando ',
+      then: 'Entonces ',
+      and: 'Y ',
+      scenario_outline: 'Esquema del escenario:'
+    },
   }
 };
