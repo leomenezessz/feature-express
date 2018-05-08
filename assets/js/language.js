@@ -12,7 +12,7 @@ const LANGUAGE = {
       when: 'Quando ',
       then: 'Então ',
       and: 'E ',
-      scenario_outline: 'scenario_outline'
+      scenario_outline: 'Esquema do Cenário:'
     },
     en: {
       feature: 'Feature:',
