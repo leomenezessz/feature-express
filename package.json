@@ -4,7 +4,8 @@
   "description": "Feature-Express is simple way to expose your features in a beatifull html.",
   "main": "./lib/reader.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test_coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "bin": {
     "feature-express": "./bin/global-feature-express.js"
@@ -27,7 +28,8 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
-    "mocha": "^5.0.5"
+    "mocha": "^5.0.5",
+    "istanbul": "^0.4.5"
   },
   "dependencies": {
     "ejs": "^2.5.8",
