@@ -26,5 +26,5 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: yarn test_coverage
-      - store_test_results:
+      - store_artifacts:
           path: coverage/lcov-report/index.html
