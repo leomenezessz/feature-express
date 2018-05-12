@@ -27,4 +27,4 @@ jobs:
 
       - run: yarn test_coverage
       - store_artifacts:
-          path: coverage/lcov-report/index.html
+          path: coverage/
