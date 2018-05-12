@@ -26,3 +26,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: yarn test_coverage
+general:
+  artifacts:
+    - "coverage"
