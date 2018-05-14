@@ -3,8 +3,8 @@
 Feature-Express is simple way to expose your features in a beatifull html.
 
 
-![CircleCI branch](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser/master.svg?style=for-the-badge)
-![npm](https://img.shields.io/npm/v/npm.svg?style=for-the-badge)
+[![CircleCI](https://circleci.com/gh/menezes-ssz/feature-express.svg?style=svg)](https://circleci.com/gh/menezes-ssz/feature-express)
+[![NPM](https://nodei.co/npm/feature-express.png?mini=true)](https://www.npmjs.com/package/feature-express)
 
 
 ## View Sample
@@ -20,7 +20,7 @@ $ npm install -g feature-express
 ## Running Tips  
 * With this command the server start at port 3000 and gherkin language English
 ```
-$ feature-express ./YOUR-FEATURES-FOLDER/ 
+$ feature-express ./YOUR-FEATURES-FOLDER/
 ```
 * If you need a specific gherkin language and a different port send it in that order :
  ```
