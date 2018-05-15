@@ -30,7 +30,7 @@ $ feature-express ./YOUR-FEATURES-FOLDER/
 After running the command, your console will generate a url to see your features **"Feature-Express is running at http://localhost:4444/"**
 # Laguage
 
-* Express-Feature only support portuguese and english language at the moment.
+* Express-Feature only support portuguese (pt), spanish (es) and english (en) language at the moment.
 * To add a new laguages options add an object to this enum file **language.js** , and send your pull request.
 
 # NOTE

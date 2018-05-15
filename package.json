@@ -1,6 +1,6 @@
 {
   "name": "feature-express",
-  "version": "0.1.5",
+  "version": "0.2.7",
   "description": "Feature-Express is simple way to expose your features in a beatifull html.",
   "main": "./lib/reader.js",
   "scripts": {
