@@ -29,10 +29,14 @@ $(document).ready(function () {
       if($(this).text().trim().charAt(0)==="@"){
         var pos = $(this).text().trim().indexOf("@");
         // colocar span e adicionar class somente nos textos e remover console.log
-        console.log($(this).text().trim().slice(pos));
+        console.log($(this).text().trim().slice(pos, -1));
         $(this).addClass('cs-feature-tag');
       }
     });
+
+    $('.tab-pane').first().addClass('active');
+    $('.list-group a').first().addClass('active show');
+
     $(".tab-pane ul li:contains(|)").each(function () {
       $(this).css('white-space', 'pre');
     });

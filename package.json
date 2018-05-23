@@ -21,9 +21,9 @@
   ],
   "license": "MIT",
   "preferGlobal": true,
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/menezes-ssz/feature-express.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/menezes-ssz/feature-express.git"
   },
   "devDependencies": {
     "chai": "^4.1.2",
