@@ -102,13 +102,12 @@ li span {
 .cs-feature-tag {
   color: #0699BE !important;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 13px;
-  border: 1px solid #96C2CD;
-  padding: 5px 10px;
-  display: inline;
-  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  display: block;
   margin-bottom: 10px;
+  line-height: 20px;
 }
 
 .cs-feature-steps {
@@ -262,4 +261,18 @@ li span {
   .tab-pane {
     margin-left: 30px 10px;
   }
+}
+
+/* Param text */
+.cs-feature-param {
+  font-style: italic;
+  color: #848484;
+}
+
+.cs-feature-param:before {
+  content: '< ';
+}
+
+.cs-feature-param:after {
+  content: ' >';
 }
