@@ -1,12 +1,13 @@
 const LANGUAGE = {
   portuguese: 'pt',
   english: 'en',
+  spanish: 'es',
   keywords: {
     pt: {
       feature: 'Funcionalidade:',
       scenario: 'Cenário:',
       background: 'Contexto:',
-      examples: 'Exemplo:',
+      examples: 'Exemplos:',
       but: 'Mas ',
       given: 'Dado ',
       when: 'Quando ',

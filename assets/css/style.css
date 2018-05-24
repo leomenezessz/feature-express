@@ -2,11 +2,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.tab-content {
-  margin-left: 40px;
-}
-
-/* List */
+/* =========== List =========== */
 ul {
   list-style: none;
   padding: 0;
@@ -46,14 +42,13 @@ li span {
   background-color: #06BE9F;
 }
 
-/* Customizations */
+/* =========== Header =========== */
 .cs-header {
   background: #fff;
   width: 100%;
   display: block;
   padding: 30px 0;
   text-align: center;
-
 }
 
 .cs-header__brand {
@@ -69,24 +64,18 @@ li span {
   padding: 0;
 }
 
+/* =========== Content =========== */
+.tab-content {
+  margin-left: 10px;
+}
 .cs-content {
   background: #f8f9fa;
   height: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 62px);
   border-left: 1px solid #EFEFEF;
 }
 
-@media screen and (max-width: 992px) {
-  .cs-content {
-    background: #f8f9fa;
-    height: 100%;
-    min-height: 100vh;
-    border-left: 1px solid #EFEFEF;
-    display: block;
-    float: left;
-  }
-}
-
+/* =========== Pane =========== */
 .cs-pane {
   border-radius: 0;
   background: #f8f9fa;
@@ -100,40 +89,43 @@ li span {
   color: #06BE9F;
 }
 
+/* =========== Titles =========== */
 .cs-feature-title {
   font-size: 29px;
 }
 
 .cs-feature-title strong {
   display: block;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
 .cs-feature-tag {
   color: #0699BE !important;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 13px;
-  border: 1px solid #96C2CD;
-  padding: 5px 10px;
-  display: inline;
-  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  display: block;
   margin-bottom: 10px;
+  line-height: 20px;
 }
 
 .cs-feature-steps {
   margin-left: 20px;
 }
+
+/* =========== Footer =========== */
 .cs-footer {
   background: #5A5A5A;
   width: 100%;
   display: block;
-  padding: 20px;
+  padding: 10px;
   position: sticky;
   bottom: 0;
   z-index: 1020;
   text-align: center;
   color: #fff;
+  font-size: 14px;
 }
 
 .cs-footer a {
@@ -141,32 +133,27 @@ li span {
   color: #06BE9F;
 }
 
-
 .cs-footer span {
-  font-size: 12px;
+  font-size: 11px;
 }
 
-/*
- * Sidebar
- */
-
+/* =========== Sidebar =========== */
 .sidebar {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 100; /* Behind the navbar */
+  z-index: 100;
   padding: 0;
-
 }
 
 .sidebar-sticky {
   position: -webkit-sticky;
   position: sticky;
-  height: calc(100vh - 48px);
+  height: 100vh;
   padding-top: .5rem;
   overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  overflow-y: auto;
 }
 
 .sidebar .nav-link {
@@ -193,6 +180,7 @@ li span {
   text-transform: uppercase;
 }
 
+/* =========== Error page =========== */
 .cs-error {
   text-align: center;
   display: table;
@@ -225,8 +213,7 @@ li span {
   font-size: 16px;
 }
 
-/* Small screen */
-
+/* =========== Small screen =========== */
 @media screen and (max-width: 992px) {
   .cs-content {
     background: #f8f9fa;
@@ -274,4 +261,18 @@ li span {
   .tab-pane {
     margin-left: 30px 10px;
   }
+}
+
+/* Param text */
+.cs-feature-param {
+  font-style: italic;
+  color: #848484;
+}
+
+.cs-feature-param:before {
+  content: '< ';
+}
+
+.cs-feature-param:after {
+  content: ' >';
 }

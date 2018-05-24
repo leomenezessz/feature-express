@@ -4,7 +4,6 @@ $(document).ready(function () {
     $(this).tab('show')
   });
 
-
   $('.tab-pane ul li').each(function () {
     $(this).html($(this).html().replace(/\"/g, "<strong>\"</strong>"));
     $(this).html($(this).html().replace(/\|/g, "<strong>|</strong>"));
@@ -25,15 +24,32 @@ $(document).ready(function () {
     $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].feature + ")").each(function () {
       $(this).addClass('cs-feature-title');
     });
+
     $(".tab-pane ul li:contains(@)").each(function () {
-      $(this).addClass('cs-feature-tag');
+      if($(this).text().trim().charAt(0)==="@"){
+        $(this).html().split('@').forEach(element => {
+          if(element != ""){
+            $(this).html($(this).html().replace(element, "<span class='cs-feature-tag'>@" + element  + "</span>"));
+          }
+          $(this).html($(this).html().replace(/@</, "<"));
+        });
+      }
     });
+
+    $('.tab-pane').first().addClass('active');
+    $('.list-group a').first().addClass('active show');
+
     $(".tab-pane ul li:contains(|)").each(function () {
       $(this).css('white-space', 'pre');
     });
+
+    $(".tab-pane ul li:contains(<)").each(function () {
+      $(this).html($(this).html().replace(/&lt;/g , "<span class='cs-feature-param'>"));
+      $(this).html($(this).html().replace(/&gt;/g , "</span>"));
+    });
+
     $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].given + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].when + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].then + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].but + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].and + ")").each(function () {
       $(this).addClass('cs-feature-steps');
     });
   });
-
 });

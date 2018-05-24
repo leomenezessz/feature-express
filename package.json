@@ -1,6 +1,6 @@
 {
   "name": "feature-express",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Feature-Express is simple way to expose your features in a beatifull html.",
   "main": "./lib/reader.js",
   "scripts": {
@@ -21,9 +21,9 @@
   ],
   "license": "MIT",
   "preferGlobal": true,
-  "repository" :
-  { "type" : "git"
-  , "url" : "https://github.com/menezes-ssz/feature-express.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/menezes-ssz/feature-express.git"
   },
   "devDependencies": {
     "chai": "^4.1.2",
