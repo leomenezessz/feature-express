@@ -4,7 +4,6 @@ $(document).ready(function () {
     $(this).tab('show')
   });
 
-
   $('.tab-pane ul li').each(function () {
     $(this).html($(this).html().replace(/\"/g, "<strong>\"</strong>"));
     $(this).html($(this).html().replace(/\|/g, "<strong>|</strong>"));
@@ -28,8 +27,12 @@ $(document).ready(function () {
 
     $(".tab-pane ul li:contains(@)").each(function () {
       if($(this).text().trim().charAt(0)==="@"){
-        var texto = $(this).text().trim();
-          $(this).html($(this).html().replace(texto,"<span class='cs-feature-tag'>"+texto));
+        $(this).html().split('@').forEach(element => {
+          if(element != ""){
+            $(this).html($(this).html().replace(element, "<span class='cs-feature-tag'>@" + element  + "</span>"));
+          }
+          $(this).html($(this).html().replace(/@</, "<"));
+        });
       }
     });
 
@@ -47,7 +50,6 @@ $(document).ready(function () {
 
     $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].given + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].when + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].then + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].but + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].and + ")").each(function () {
       $(this).addClass('cs-feature-steps');
-
     });
   });
 });
