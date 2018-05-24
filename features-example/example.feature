@@ -1,6 +1,6 @@
 # language: en
 # encoding: utf-8
-
+@smokeTest
 Feature: This is a feature
 This a little description.
 
