@@ -28,6 +28,20 @@ $ feature-express ./YOUR-FEATURES-FOLDER/
  ```
  ## See your Features on HTML
 After running the command, your console will generate a url to see your features **"Feature-Express is running at http://localhost:4444/"**
+
+## Running with Docker
+
+### To run feature-express docker image on port 3000 and mapping features folder
+```
+docker pull menezes-ssz/feature-express:latest
+docker run -p 3000:3000 -v ABSOULUTE_PATH_FOR_YOUR_FEATURES_FOLDER:/opt/app/features/ menezes-ssz/feature-express
+```
+
+### To change PORT and LANG of feature-expresss
+```
+docker run -p 3000:3001 -e LANG=en -e PORT=3001 -v ABSOULUTE_PATH_FOR_YOUR_FEATURES_FOLDER:/opt/app/features/ menezes-ssz/feature-express
+```
+
 # Laguage
 
 * Express-Feature only support portuguese (pt), spanish (es) and english (en) language at the moment.
