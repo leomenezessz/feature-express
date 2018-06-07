@@ -1,0 +1,7 @@
+README.md
+npm-debug.log
+.gitignore
+.circleci/
+node_modules/
+test/
+features-example/

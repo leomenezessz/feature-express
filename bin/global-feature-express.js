@@ -5,8 +5,8 @@ let reader = require('../lib/reader.js');
 let app = express();
 let featurebookEndPoint = '/';
 let envPath = process.argv[2];
-let language = process.argv[3] == null ? 'en' : process.argv[3];
-let port = process.argv[4] == null ? 3000 :  process.argv[4];
+let language = process.argv[3] || process.env.LANG || 'en';
+let port = process.argv[4] || process.env.PORT || 3000;
 
 let path = require('path');
 
