@@ -18,11 +18,7 @@ Feature-Express is simple way to expose your features in a beatifull html.
 $ npm install -g feature-express
 ```
 ## Running Tips  
-* With this command the server start at port 3000 and gherkin language English
-```
-$ feature-express ./YOUR-FEATURES-FOLDER/
-```
-* If you need a specific gherkin language and a different port send it in that order :
+* To run feature-express you need to specify gherkin language and a port, send it in that order :
  ```
  $ feature-express ./YOUR-FEATURES-FOLDER/ pt 4444
  ```
