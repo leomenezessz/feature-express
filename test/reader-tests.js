@@ -5,14 +5,14 @@ let reader = require('../lib/reader.js');
 let contentFeaturesFiles = require('./content-features-files');
 let fs = require ('fs');
 
-let allFilesFromFolderFeatures = ['example.feature', 'example2.feature','example3.feature', 'hello.java', 'hello.ruby'];
-let onlyFeatureFilesFromFolderFeatures = ['example.feature', 'example2.feature', 'example3.feature'];
-let featuresExamplePaht = "./features-example/";
+let allFilesFromFolderFeatures = ['-myEnglishFeature-.feature','hello.java','hello.ruby','my-spanish_feature.feature','my_portuguese_feature.feature' ];
+let onlyFeatureFilesFromFolderFeatures = ['-myEnglishFeature-.feature','my-spanish_feature.feature','my_portuguese_feature.feature'];
+let featuresExamplePath = "./features-example/";
 let invalidPath = "./invalid-path/";
 
 describe ("Reader Tests", () => {
     it("Should return array of files from directory", async ()=>{
-       const array = await reader.files(featuresExamplePaht);
+       const array = await reader.files(featuresExamplePath);
        expect(array).to.be.eql(allFilesFromFolderFeatures);
     })
 
@@ -22,9 +22,9 @@ describe ("Reader Tests", () => {
     })
     
     it("Should read and format all features files from array of features files", async ()=>{
-        const array = await reader.files(featuresExamplePaht);
+        const array = await reader.files(featuresExamplePath);
         const featuresFiles = await reader.filterFeatureFiles(array);
-        const formatedFeatures = await reader.formatedFeatures(featuresFiles ,featuresExamplePaht);
+        const formatedFeatures = await reader.formatedFeatures(featuresFiles ,featuresExamplePath);
         expect(formatedFeatures).to.be.eql(contentFeaturesFiles);
      })
 

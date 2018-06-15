@@ -18,7 +18,7 @@ Feature-Express is simple way to expose your features in a beatifull html.
 $ npm install -g feature-express
 ```
 ## Running Tips  
-* To run feature-express you need to specify gherkin language and a port, send it in that order :
+* To run feature-express you'll need to specify a gherkin language and a port, send it in that order :
  ```
  $ feature-express ./YOUR-FEATURES-FOLDER/ pt 4444
  ```

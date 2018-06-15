@@ -24,6 +24,10 @@ $(document).ready(function () {
     $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].feature + ")").each(function () {
       $(this).addClass('cs-feature-title');
     });
+    $(".list-group-item").each(function () {
+      $(this).html($(this).html().replace(/[_-]/g , " "));
+      $(this).html($(this).html().replace(/([a-z](?=[A-Z]))/g, '$1 '));
+    });
 
     $(".tab-pane ul li:contains(@)").each(function () {
       if($(this).text().trim().charAt(0)==="@"){
