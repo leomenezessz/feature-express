@@ -38,6 +38,13 @@ $(document).ready(function () {
           $(this).html($(this).html().replace(/@</, "<"));
         });
       }
+    }); 
+
+    $(".tab-pane ul li:contains(@PPB)").each(function () {
+      $(this).text().split("@").forEach(element =>{
+        $(this).html($(this).html().replace(element, "<a class='cs-feature-tag' href='#' onClick=openJiraIssue(\""+ element + "\") " + ">@" + element  + "</a>"));
+        $(this).html($(this).html().replace(/@</, "<"));
+      })
     });
 
     $('.tab-pane').first().addClass('active');
@@ -57,3 +64,7 @@ $(document).ready(function () {
     });
   });
 });
+
+function openJiraIssue(pbiNumber) {
+  boardUrl === null ? alert("Please set a base url!") : window.open(boardUrl.concat(pbiNumber));
+}

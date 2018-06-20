@@ -18,12 +18,38 @@ Feature-Express is simple way to expose your features in a beatifull html.
 $ npm install -g feature-express
 ```
 ## Running Tips  
+
 * To run feature-express you'll need to specify a gherkin language and a port, send it in that order :
+
  ```
  $ feature-express ./YOUR-FEATURES-FOLDER/ pt 4444
  ```
+* To read all features files from directories and sub directories  you'll can do :
+
+```
+$ feature-express ./ pt 4444
+```
+
  ## See your Features on HTML
 After running the command, your console will generate a url to see your features **"Feature-Express is running at http://localhost:4444/"**
+
+## Link your jira issues
+
+You can create links to your jira issues with cucumber tags, just add @YOUR-ISSUE-ID 
+
+```
+@ISSUE-ID 
+Scenario: This is a Scenario and this is a simple teste @test
+    Given This is a given step 
+    When This is a when step
+    Then This is a then step
+```
+
+And run feature-express sending all parameters above in that order :
+
+```
+ $ feature-express ./features-example/ pt 3000 https://YOUR-JIRA-LINK.atlassian.net/browse/
+```
 
 ## Running with Docker
 

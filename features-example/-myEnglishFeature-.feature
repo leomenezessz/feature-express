@@ -7,6 +7,7 @@ This a little description.
 Background: This is a background
 
 @I'm a beatifull tag @I'm a beatifull tag too
+@PPB-886
 Scenario: This is a Scenario and this is a simple teste @test
 Given This is a given step
 When This is a when step
