@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="css/style.css">
      <% var bddLanguage = language;%>
      <% var boardUrlBase = jiraUrlBase;%>
+     <% var acronym = boardAcronym;%>
     <script type="text/javascript">
       var gherkinLanguage = <%- JSON.stringify(bddLanguage)  %>;
       var boardUrl = <%- JSON.stringify(boardUrlBase)  %>;
-
+      var acronymId = <%- JSON.stringify(acronym)  %>;
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="js/html-keywords.js"></script>

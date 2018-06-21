@@ -40,7 +40,7 @@ $(document).ready(function () {
       }
     }); 
 
-    $(".tab-pane ul li:contains(@PPB)").each(function () {
+    $(".tab-pane ul li:contains(@"+acronymId+")").each(function () {
       $(this).text().split("@").forEach(element =>{
         $(this).html($(this).html().replace(element, "<a class='cs-feature-tag' href='#' onClick=openJiraIssue(\""+ element + "\") " + ">@" + element  + "</a>"));
         $(this).html($(this).html().replace(/@</, "<"));

@@ -45,10 +45,16 @@ Scenario: This is a Scenario and this is a simple teste @test
     Then This is a then step
 ```
 
-And run feature-express sending all parameters above in that order :
+And run feature-express sending all parameters below in that order :
 
 ```
- $ feature-express ./features-example/ pt 3000 https://YOUR-JIRA-LINK.atlassian.net/browse/
+ $ feature-express ./features-example/ pt 3000 https://YOUR-JIRA-LINK.atlassian.net/browse/ YOUR-ACRONYM-ON -THE-BOARD
+```
+
+For example :
+
+```
+ $ feature-express ./features-example/ pt 3000 https://leonardoboard.atlassian.net/browse/ PPB
 ```
 
 ## Running with Docker
