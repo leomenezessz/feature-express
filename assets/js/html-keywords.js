@@ -7,21 +7,21 @@ $(document).ready(function () {
   $('.tab-pane ul li').each(function () {
     $(this).html($(this).html().replace(/\"/g, "<strong>\"</strong>"));
     $(this).html($(this).html().replace(/\|/g, "<strong>|</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].feature, "<strong>" + LANGUAGE.keywords[gherkinLanguage].feature + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].background, "<strong>" + LANGUAGE.keywords[gherkinLanguage].background + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].examples, "<strong>" + LANGUAGE.keywords[gherkinLanguage].examples + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].scenario_outline, "<strong>" + LANGUAGE.keywords[gherkinLanguage].scenario_outline + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].scenario, "<strong>" + LANGUAGE.keywords[gherkinLanguage].scenario + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].given, "<strong>" + LANGUAGE.keywords[gherkinLanguage].given + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].when, "<strong>" + LANGUAGE.keywords[gherkinLanguage].when + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].but, "<strong>" + LANGUAGE.keywords[gherkinLanguage].but + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].then, "<strong>" + LANGUAGE.keywords[gherkinLanguage].then + "</strong>"));
-    $(this).html($(this).html().replace(LANGUAGE.keywords[gherkinLanguage].and, "<strong>" + LANGUAGE.keywords[gherkinLanguage].and + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].feature, "<strong>" + LANGUAGES.keywords[gherkinLanguage].feature + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].background, "<strong>" + LANGUAGES.keywords[gherkinLanguage].background + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].examples, "<strong>" + LANGUAGES.keywords[gherkinLanguage].examples + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].scenario_outline, "<strong>" + LANGUAGES.keywords[gherkinLanguage].scenario_outline + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].scenario, "<strong>" + LANGUAGES.keywords[gherkinLanguage].scenario + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].given, "<strong>" + LANGUAGES.keywords[gherkinLanguage].given + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].when, "<strong>" + LANGUAGES.keywords[gherkinLanguage].when + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].but, "<strong>" + LANGUAGES.keywords[gherkinLanguage].but + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].then, "<strong>" + LANGUAGES.keywords[gherkinLanguage].then + "</strong>"));
+    $(this).html($(this).html().replace(LANGUAGES.keywords[gherkinLanguage].and, "<strong>" + LANGUAGES.keywords[gherkinLanguage].and + "</strong>"));
   });
 
   // Add CSS Classes
   $(function () {
-    $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].feature + ")").each(function () {
+    $(".tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].feature + ")").each(function () {
       $(this).addClass('cs-feature-title');
     });
     $(".list-group-item").each(function () {
@@ -38,7 +38,7 @@ $(document).ready(function () {
           $(this).html($(this).html().replace(/@</, "<"));
         });
       }
-    }); 
+    });
 
     $(".tab-pane ul li:contains(@"+acronymId+")").each(function () {
       $(this).text().split("@").forEach(element =>{
@@ -59,7 +59,7 @@ $(document).ready(function () {
       $(this).html($(this).html().replace(/&gt;/g , "</span>"));
     });
 
-    $(".tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].given + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].when + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].then + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].but + "), .tab-pane ul li:contains(" + LANGUAGE.keywords[gherkinLanguage].and + ")").each(function () {
+    $(".tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].given + "), .tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].when + "), .tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].then + "), .tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].but + "), .tab-pane ul li:contains(" + LANGUAGES.keywords[gherkinLanguage].and + ")").each(function () {
       $(this).addClass('cs-feature-steps');
     });
   });
