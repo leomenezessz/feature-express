@@ -55,7 +55,6 @@ if(!process.env.BUILD_MODE) {
       );
     }
   });
-
 }
 
 module.exports = app;
