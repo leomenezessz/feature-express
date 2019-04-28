@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // If first valid argument is build, do static build
 if(process.argv[2] === 'build') {
   process.argv.splice(2, 1);

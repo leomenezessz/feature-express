@@ -6,7 +6,8 @@ const app = require('./global-feature-express');
 const build = require('../lib/build');
 
 const buildPath = path.resolve('./.feature-express/build');
-const assetsPath = path.resolve(__dirname, '..', `assets`);
+const assetsPath = path.resolve(__dirname, '..', 'assets');
+const languagesPath = path.resolve(__dirname, '..', 'lib', 'locales.js');
 
 const displayLog = (message) => () => console.log(message, '\n');
 
@@ -38,7 +39,7 @@ const createDirectory = dir => () => new Promise((resolve, reject) => {
 
 const copyDirectory = (from, to) => () => new Promise((resolve, reject) => {
   fse
-  .copy(`${assetsPath}`, buildPath)
+  .copy(from, to)
   .then(resolve)
   .catch(displayError(`Is not possible to copy assets to ${to} directory. Check your permissions.`));
 });
@@ -50,12 +51,12 @@ const writeFile = file => content => new Promise((resolve, reject) => {
   .catch(displayError(`Is not possible to write feature express html in ${file}. Check your permissions.`));
 });
 
-
 const steps =
   clearDirectory(buildPath)
   .then(createDirectory(buildPath))
   .then(displayLog(`Creating build directory at ${buildPath}`))
   .then(copyDirectory(`${assetsPath}`, buildPath))
+  .then(copyDirectory(`${languagesPath}`, `${buildPath}/js/locales.js`))
   .then(displayLog(`Copying static assets to build folder`))
   .then(() => build.getIndexPage(app))
   .then(writeFile(`${buildPath}/index.html`))
