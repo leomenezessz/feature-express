@@ -12,7 +12,6 @@ const languagesPath = path.resolve(__dirname, '..', 'lib', 'locales.js');
 const displayLog = (message) => () => console.log(message, '\n');
 
 const displayError = (message) => (err) => {
-  console.error(err);
   throwError(message);
 }
 const throwError = (message) => {
@@ -22,37 +21,26 @@ const throwError = (message) => {
     .catch(() => process.exit(1));
 }
 
+const simpleFseOperation = (methodName, onError) => (...args) => (...moreArgs) => new Promise((resolve, reject) => {
+  fse[methodName](...[...args, ...moreArgs])
+  .then(resolve)
+  .catch(() => onError(...args));
+});
+
+
+const createDirectory = simpleFseOperation('mkdirp', dir => throwError(`Is not possible to create ${dir} directory. Check your permissions.`));
+const copyDirectory = simpleFseOperation('copy', (from, to) => throwError(`Is not possible to copy assets to ${to} directory. Check your permissions.`));
+const writeFile = simpleFseOperation('writeFile', file => throwError(`Is not possible to write feature express html in ${file}. Check your permissions.`));
+
 const clearDirectory = dir => new Promise((resolve, reject) => {
   fse
   .exists(dir)
   .then((exists) => exists ? fse.emptyDir(dir) : false)
   .then(resolve)
-  .catch(displayError(`Is not possible to clean ${dir} directory. Check your permissions.`));
+  .catch(() => displayError(`Is not possible to clean ${dir} directory. Check your permissions.`));
 });
 
-const createDirectory = dir => () => new Promise((resolve, reject) => {
-  fse
-  .mkdirp(dir)
-  .then(resolve)
-  .catch(displayError(`Is not possible to create ${dir} directory. Check your permissions.`));
-});
-
-const copyDirectory = (from, to) => () => new Promise((resolve, reject) => {
-  fse
-  .copy(from, to)
-  .then(resolve)
-  .catch(displayError(`Is not possible to copy assets to ${to} directory. Check your permissions.`));
-});
-
-const writeFile = file => content => new Promise((resolve, reject) => {
-  fse
-  .writeFile(file, content)
-  .then(resolve)
-  .catch(displayError(`Is not possible to write feature express html in ${file}. Check your permissions.`));
-});
-
-const steps =
-  clearDirectory(buildPath)
+clearDirectory(buildPath)
   .then(createDirectory(buildPath))
   .then(displayLog(`Creating build directory at ${buildPath}`))
   .then(copyDirectory(`${assetsPath}`, buildPath))
