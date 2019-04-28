@@ -5,7 +5,7 @@ const app = require('./global-feature-express');
 
 const build = require('../lib/build');
 
-const buildPath = path.resolve('./build');
+const buildPath = path.resolve('./.feature-express/build');
 const assetsPath = path.resolve(__dirname, '..', `assets`);
 
 const displayLog = (message) => () => console.log(message, '\n');
