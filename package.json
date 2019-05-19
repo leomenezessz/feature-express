@@ -5,11 +5,12 @@
   "main": "./lib/reader.js",
   "scripts": {
     "dev": "nodemon ./bin/global-feature-express",
+    "bin": "node ./bin/feature-express",
     "test": "mocha",
     "test_coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "bin": {
-    "feature-express": "./bin/global-feature-express.js"
+    "feature-express": "./bin/feature-express.js"
   },
   "author": "Leonardo Menezes",
   "contributors": [
@@ -36,6 +37,7 @@
   "dependencies": {
     "ejs": "^2.5.8",
     "express": "^4.16.3",
+    "fs-extra": "^7.0.1",
     "glob": "^7.1.2"
   }
 }

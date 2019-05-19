@@ -38,9 +38,10 @@ app.get(featurebookEndPoint, (req, res) =>
     )
 );
 
-app
+if(!process.env.BUILD_MODE) {
+  app
   .listen(port, function() {
-    console.log(
+     console.log(
       "Feature-Express is running at " +
         "http://localhost:" +
         port +
@@ -54,5 +55,6 @@ app
       );
     }
   });
+}
 
 module.exports = app;
